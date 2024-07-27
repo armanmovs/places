@@ -14,7 +14,7 @@ html {
 /* Container */
 .container {
     max-width: 900px;
-    margin: 40px 0;
+    margin: 40px 20px; /* Add margin on the sides */
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
@@ -84,6 +84,7 @@ p {
 
     .container {
         padding: 10px;
+        margin: 20px 10px; /* Add margin on the sides for smaller screens */
     }
 
     ul li a {
