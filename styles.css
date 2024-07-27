@@ -1,4 +1,8 @@
 /* General Styles */
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Helvetica Neue', sans-serif;
     line-height: 1.6;
@@ -9,12 +13,14 @@ body {
 /* Smooth Scroll */
 html {
     scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
 }
 
 /* Container */
 .container {
     max-width: 900px;
-    margin: 40px 20px; /* Add margin on the sides */
+    margin: 40px auto; /* Center the container */
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
@@ -53,6 +59,7 @@ ul li {
 ul li a {
     text-decoration: none;
     font-size: 18px;
+    color: #0066cc;
 }
 
 ul li a:hover {
@@ -84,7 +91,7 @@ p {
 
     .container {
         padding: 10px;
-        margin: 20px 10px; /* Add margin on the sides for smaller screens */
+        margin: 20px; /* Add margin on the sides for smaller screens */
     }
 
     ul li a {
