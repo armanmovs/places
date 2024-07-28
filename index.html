@@ -13,6 +13,12 @@
         ul, ol {
             font-size: 16px; 
         }
+        .container img {
+            max-width: 100%; 
+            height: auto; 
+            display: block; 
+            margin: 0 auto; 
+        }
     </style>
 </head>
 <body>
@@ -26,21 +32,27 @@
         <h1>Agenda</h1>
         <ol>
             <li><a href="#Projektbeschreibung">Projektbeschreibung</a></li>
-            <ol>
-                <li><a href="#Problem">Problem</a></li>
-                <li><a href="#Value Proposition">Value Proposition</a></li>
-                <li><a href="#MVP">MVP</a></li>
-            </ol>
+            <li>
+                <ol>
+                    <li><a href="#Problem">Problem</a></li>
+                    <li><a href="#Value Proposition">Value Proposition</a></li>
+                    <li><a href="#MVP">MVP</a></li>
+                </ol>
+            </li>
             <li><a href="#Zeitplan">Zeitplan</a></li>
-            <ol>
-                <li><a href="#Erste Phase">Erste Phase</a></li>
-                <li><a href="#Zweite Phase">Zweite Phase</a></li>
-            </ol>
+            <li>
+                <ol>
+                    <li><a href="#Erste Phase">Erste Phase</a></li>
+                    <li><a href="#Zweite Phase">Zweite Phase</a></li>
+                </ol>
+            </li>
             <li><a href="#App Architecture">App Architecture</a></li>
-            <ol>
-                <li><a href="#Design Decisions">Design Decisions</a></li>
-                <li><a href="#Key Solution">Key Solution</a></li>
-            </ol>
+            <li>
+                <ol>
+                    <li><a href="#Design Decisions">Design Decisions</a></li>
+                    <li><a href="#Key Solution">Key Solution</a></li>
+                </ol>
+            </li>
         </ol>
 
         <h1 id="Projektbeschreibung">Projektbeschreibung</h1>
@@ -90,7 +102,7 @@
         
         <h2 id="Erste Phase">Erste Phase</h2>
         <p>Die erste Phase begann am 1. Mai und bestand aus der Technologie-Spezifikation, z.B. Auswahl der geeigneten Datenbank und der zu verwendenden Funktionen. Es gab auch eine Designphase, in der die Benutzeroberfläche entworfen wurde, und eine Präsentation, bei der wir unser Projekt vorstellten. Am Ende der ersten Phase hatten wir bereits die Login- und Registrierungsfunktion (verbunden mit der Datenbank) und die Hauptseite implementiert.</p>
-        <p><img src="datenbank_1.jpg" alt="Diagramm der App Architektur"></p>
+        <p><img src="diagram_1.png" alt="Diagramm der App Architektur"></p>
 
         <h2 id="Zweite Phase">Zweite Phase</h2>
         <p>Die zweite Phase begann am 15. Juli. In dieser Phase wurde die Datenbank vollständig gefüllt, der Code für die Favoriten-Seite geschrieben, das Tagging-System für die Locationsuche implementiert und Pop-up-Fenster für jede Location erstellt. Außerdem wurde die Webseite mit der Dokumentation erstellt.</p>
