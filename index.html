@@ -107,78 +107,71 @@
         <h2 id="Zweite Phase">Zweite Phase</h2>
         <p>Die zweite Phase begann am 15. Juli. In dieser Phase wurde die Datenbank vollständig gefüllt, der Code für die Favoriten-Seite geschrieben, das Tagging-System für die Locationsuche implementiert und Pop-up-Fenster für jede Location erstellt. Außerdem wurde die Webseite mit der Dokumentation erstellt.</p>
         
-        <h1 id="App Architecture">App Architecture</h1>
-<p><strong>Client-Side</strong></p>
-<ul>
-    <li><strong>JavaScript</strong>: Used for DOM manipulation, event handling, and making asynchronous HTTP requests.</li>
-    <li><strong>HTML</strong>: Provides the structure for the pages, including modal dialogs and forms for login and registration.</li>
-    <li><strong>CSS</strong>: Styles the elements, including the filter bar, buttons, dialogs, and map.</li>
-    <li><strong>Mapbox GL JS</strong>: For interactive maps, user location visualization, and geographical features.</li>
-    <li><strong>Firebase</strong>: For authentication and real-time database functionalities.</li>
-</ul>
+       <h1 id="App Architecture">App Architecture</h1>
+    <p><strong>Client-Side</strong></p>
+    <ul>
+        <li><strong>JavaScript</strong>: Used for DOM manipulation, event handling, and making asynchronous HTTP requests.</li>
+        <li><strong>HTML</strong>: Provides the structure for the pages, including modal dialogs and forms for login and registration.</li>
+        <li><strong>CSS</strong>: Styles the elements, including the filter bar, buttons, dialogs, and map.</li>
+        <li><strong>Mapbox GL JS</strong>: For interactive maps, user location visualization, and geographical features.</li>
+        <li><strong>Firebase</strong>: For authentication and real-time database functionalities.</li>
+    </ul>
 
-<p><strong>Server-Side</strong></p>
-<ul>
-    <li><strong>Flask</strong>: (Assumed from the template tags and structure) For handling routing, rendering templates, and serving static files.</li>
-    <li><strong>Firebase</strong>: Backend services for storing user data, managing authentication, and synchronizing user actions with the database.</li>
-</ul>
+    <p><strong>Server-Side</strong></p>
+    <ul>
+        <li><strong>Flask</strong>: (Assumed from the template tags and structure) For handling routing, rendering templates, and serving static files.</li>
+        <li><strong>Firebase</strong>: Backend services for storing user data, managing authentication, and synchronizing user actions with the database.</li>
+    </ul>
 
-<h2 id ="Design Decisions">Design Decisions/h2>
-<p><strong>Client-Side</strong></p>
-<ul>
-    <li><strong>Event Listeners</strong>: Used extensively to handle user interactions such as clicks, input changes, and DOM content loading.</li>
-    <li><strong>Fetch API</strong>: Used for making HTTP requests to the server, ensuring a seamless user experience with asynchronous operations.</li>
-    <li><strong>Geolocation</strong>: Utilizes the browser’s geolocation API to get and store user’s location, enhancing the app’s personalization features.</li>
-    <li><strong>Mapbox Integration</strong>: Provides a powerful and interactive map interface for users to visualize locations and apply geographical filters.</li>
-</ul>
+    <h2 id="Design Decisions">Design Decisions</h2>
+    <p><strong>Client-Side</strong></p>
+    <ul>
+        <li><strong>Event Listeners</strong>: Used extensively to handle user interactions such as clicks, input changes, and DOM content loading.</li>
+        <li><strong>Fetch API</strong>: Used for making HTTP requests to the server, ensuring a seamless user experience with asynchronous operations.</li>
+        <li><strong>Geolocation</strong>: Utilizes the browser’s geolocation API to get and store user’s location, enhancing the app’s personalization features.</li>
+        <li><strong>Mapbox Integration</strong>: Provides a powerful and interactive map interface for users to visualize locations and apply geographical filters.</li>
+    </ul>
 
-<p><strong>UI Components</strong></p>
-<ul>
-    <li><strong>Filter Bar</strong>: Allows users to filter locations based on various criteria (geographical radius, type, theme, use case). Each filter button triggers a dialog for detailed selection.</li>
-    <li><strong>Modals</strong>: Used for login, registration, and displaying detailed location previews with images. This enhances user experience by providing more information without navigating away from the main page.</li>
-    <li><strong>Carousel</strong>: For displaying multiple images within location previews in a sleek and user-friendly manner.</li>
-</ul>
+    <p><strong>UI Components</strong></p>
+    <ul>
+        <li><strong>Filter Bar</strong>: Allows users to filter locations based on various criteria (geographical radius, type, theme, use case). Each filter button triggers a dialog for detailed selection.</li>
+        <li><strong>Modals</strong>: Used for login, registration, and displaying detailed location previews with images. This enhances user experience by providing more information without navigating away from the main page.</li>
+        <li><strong>Carousel</strong>: For displaying multiple images within location previews in a sleek and user-friendly manner.</li>
+    </ul>
+    
+    <p><strong>Firebase</strong></p>
+    <ul>
+        <li><strong>Authentication</strong>: Manages user login and registration, ensuring secure access to personalized features.</li>
+        <li><strong>Real-Time Database</strong>: Stores user data, such as profile information and location preferences, allowing real-time synchronization across devices.</li>
+    </ul>
 
-<p><strong>Firebase</strong></p>
-<ul>
-    <li><strong>Authentication</strong>: Manages user login and registration, ensuring secure access to personalized features.</li>
-    <li><strong>Real-Time Database</strong>: Stores user data, such as profile information and location preferences, allowing real-time synchronization across devices.</li>
-</ul>
-
-<h2 id ="Key Solutions">Key Solutions/h2>
+    <h2 id="Key Solutions">Key Solutions</h2>
     <p><strong>User Authentication and Data Management</strong></p>
-<ul>
-    <li><strong>Firebase Auth and Database Integration</strong>: Ensures that user data is securely stored and easily accessible. User actions such as login, registration, and last login updates are seamlessly handled.</li>
-    <li><strong>Error Handling</strong>: Alerts users to fill out all fields and displays error messages from Firebase to guide user actions.</li>
-</ul>
+    <ul>
+        <li><strong>Firebase Auth and Database Integration</strong>: Ensures that user data is securely stored and easily accessible. User actions such as login, registration, and last login updates are seamlessly handled.</li>
+        <li><strong>Error Handling</strong>: Alerts users to fill out all fields and displays error messages from Firebase to guide user actions.</li>
+    </ul>
 
-<p><strong>Geolocation and Map Visualization</strong></p>
-<ul>
-    <li><strong>Mapbox Integration</strong>: Offers a rich interactive map experience, with features like user location markers, adjustable radius circles for filtering, and dynamic map resizing.</li>
-    <li><strong>Geolocation Handling</strong>: Saves and retrieves user location from localStorage, enabling personalized map views and filters.</li>
-</ul>
+    <p><strong>Geolocation and Map Visualization</strong></p>
+    <ul>
+        <li><strong>Mapbox Integration</strong>: Offers a rich interactive map experience, with features like user location markers, adjustable radius circles for filtering, and dynamic map resizing.</li>
+        <li><strong>Geolocation Handling</strong>: Saves and retrieves user location from localStorage, enabling personalized map views and filters.</li>
+    </ul>
 
-<p><strong>UI/UX Enhancements</strong></p>
-<ul>
-    <li><strong>Dynamic Dialogs</strong>: Modular dialogs triggered by filter buttons ensure a clean and organized interface. They are positioned relative to their triggers and can be closed easily.</li>
-    <li><strong>Interactive Elements</strong>: Sliders for adjusting radius, carousels for image previews, and responsive buttons enhance the interactivity and user engagement of the app.</li>
-</ul>
+    <p><strong>UI/UX Enhancements</strong></p>
+    <ul>
+        <li><strong>Dynamic Dialogs</strong>: Modular dialogs triggered by filter buttons ensure a clean and organized interface. They are positioned relative to their triggers and can be closed easily.</li>
+        <li><strong>Interactive Elements</strong>: Sliders for adjusting radius, carousels for image previews, and responsive buttons enhance the interactivity and user engagement of the app.</li>
+    </ul>
 
-<p><strong>Responsive Design</strong></p>
-<ul>
-    <li><strong>CSS Styling</strong>: Ensures that the interface is user-friendly across different devices, with components like filter bars, buttons, and carousels being styled for responsiveness and ease of use.</li>
-</ul>
+    <p><strong>Responsive Design</strong></p>
+    <ul>
+        <li><strong>CSS Styling</strong>: Ensures that the interface is user-friendly across different devices, with components like filter bars, buttons, and carousels being styled for responsiveness and ease of use.</li>
+    </ul>
 
-<p><strong>Modular Code Structure</strong></p>
-<ul>
-    <li><strong>Separation of Concerns</strong>: JavaScript functions are modular, focusing on specific tasks like map initialization, request handling, and UI updates. This enhances code maintainability and readability.</li>
-</ul>
-
-
+    <p><strong>Modular Code Structure</strong></p>
+    <ul>
+        <li><strong>Separation of Concerns</strong>: JavaScript functions are modular, focusing on specific tasks like map initialization, request handling, and UI updates. This enhances code maintainability and readability.</li>
+    </ul>
 </body>
 </html>
-
-
-
-
-
