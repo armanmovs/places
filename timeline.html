@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projektbeschreibung</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            font-size: 16px;
+        }
+        .container img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+        /* Menu styles */
+        .menu {
+            background-color: #333;
+            overflow: hidden;
+        }
+        .menu ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        .menu ul li {
+            float: left;
+        }
+        .menu ul li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        .menu ul li a:hover {
+            background-color: #111;
+        }
+        .menu ul li ul {
+            display: none;
+            position: absolute;
+            background-color: #333;
+        }
+        .menu ul li:hover ul {
+            display: block;
+        }
+        .menu ul li ul li {
+            float: none;
+        }
+        .menu ul li ul li a {
+            padding: 12px 16px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Menu -->
+    <div class="menu">
+        <ul>
+            <li><a href="project-description.html">Projektbeschreibung</a></li>
+            <li>
+                <a href="timeline.html">Zeitplan</a>
+                <ul>
+                    <li><a href="timeline.html#ErstePhase">Erste Phase</a></li>
+                    <li><a href="timeline.html#ZweitePhase">Zweite Phase</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="architecture.html">App Architecture</a>
+                <ul>
+                    <li><a href="architecture.html#DesignDecisions">Design Decisions</a></li>
+                    <li><a href="architecture.html#KeySolutions">Key Solutions</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    
+    <div class="container">
+        <h1 id="Zeitplan">Zeitplan</h1>
+        
+        <h2 id="Erste Phase">Erste Phase</h2>
+        <p>Die erste Phase begann am 1. Mai und bestand aus der Technologie-Spezifikation, z.B. Auswahl der geeigneten Datenbank und der zu verwendenden Funktionen. Es gab auch eine Designphase, in der die Benutzeroberfläche entworfen wurde, und eine Präsentation, bei der wir unser Projekt vorstellten. Am Ende der ersten Phase hatten wir bereits die Login- und Registrierungsfunktion (verbunden mit der Datenbank) und die Hauptseite implementiert. Für die Strukturierung unseres Projekts und die Dokumentation nutzten wir die Notion-Website. Weitere Details können <a href="https://thirsty-cover-619.notion.site/Places-Web-App-66b5059db7884156a10dee211153edd9">hier</a> eingesehen werden.</p>
+        <p><img src="datenbank_1.jpg" alt="Diagramm der App Architektur"></p>
+
+        <h2 id="Zweite Phase">Zweite Phase</h2>
+        <p>Die zweite Phase begann am 15. Juli. In dieser Phase wurde die Datenbank vollständig gefüllt, der Code für die Favoriten-Seite geschrieben, das Tagging-System für die Locationsuche implementiert und Pop-up-Fenster für jede Location erstellt. Außerdem wurde die Webseite mit der Dokumentation erstellt.</p>
+        
+    </div>
+</body>
+</html>
