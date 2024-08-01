@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projektbeschreibung</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            font-size: 16px;
+        }
+        .container img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+        /* Menu styles */
+        .menu {
+            background-color: #333;
+            overflow: hidden;
+        }
+        .menu ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        .menu ul li {
+            float: left;
+        }
+        .menu ul li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        .menu ul li a:hover {
+            background-color: #111;
+        }
+        .menu ul li ul {
+            display: none;
+            position: absolute;
+            background-color: #333;
+        }
+        .menu ul li:hover ul {
+            display: block;
+        }
+        .menu ul li ul li {
+            float: none;
+        }
+        .menu ul li ul li a {
+            padding: 12px 16px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Menu -->
+    <div class="menu">
+        <ul>
+            <li><a href="project-description.html">Projektbeschreibung</a></li>
+            <li>
+                <a href="timeline.html">Zeitplan</a>
+                <ul>
+                    <li><a href="timeline.html#ErstePhase">Erste Phase</a></li>
+                    <li><a href="timeline.html#ZweitePhase">Zweite Phase</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="architecture.html">App Architecture</a>
+                <ul>
+                    <li><a href="architecture.html#DesignDecisions">Design Decisions</a></li>
+                    <li><a href="architecture.html#KeySolutions">Key Solutions</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    
+    <div class="container">
+        <h1>Projektbeschreibung</h1>
+        <p>Places ist eine Web Anwendung, welche vom grundlegenden Design an Airbnb o.ä. erinnert. Das Ziel ist es, alle potenziell interessanten Locations in einer App zu vereinen und mit einem Suchalgorithmus zugänglich zu machen. Dies erreichen wir, indem wir mit der App alle interessanten Drehorte in einem Interface darstellen und sie mit Tags versehen. Die Tags helfen dann dabei, mit einem Filter nur die Orte herauszusuchen, welche für den jeweiligen Dreh oder das Shooting passend sind. Neben den Filtern gibt es zahlreiche weitere Funktionen, um z.B. die Adresse, den Preis etc. einzusehen oder eigene Orte hochzuladen.</p>
+        
+        <h2 id="Problem">Problem</h2>
+        <p>Jede content-schaffende Person im Bereich der Musikvideos benötigt für eigentlich jedes Projekt drei Dinge:</p>
+        <ul>
+            <li>1. Das Equipment</li>
+            <li>2. Den Künstler</li>
+            <li>3. ≥ 1 Drehort</li>
+        </ul>
+        <p>Vor allem der dritte Punkt gestaltet sich gerade für kleine Produktionen häufig am schwierigsten, da für viele beliebte Drehorte eine Drehgenehmigung erforderlich ist, welche wiederum hohe Kosten verursacht, oder ein extremer Zeitaufwand für das Scouting der Locations nötig ist, bis man etwas einigermaßen Passendes gefunden hat.</p>
+        <p>Aus eigener Erfahrung können wir sagen, dass es oft darauf hinausläuft, dass man sich stundenlang durch die Straßen Berlins und Umgebung begibt, um einen Ort zu finden, welcher zum Stil des Videos passt.</p>  
+        
+        <h2 id="Value Proposition">Value Proposition</h2>
+        <p><strong>Zielgruppe:</strong></p>
+        <ul>
+            <li>1. Kleine Video- und Filmproduktionen</li>
+            <li>2. Fotografen</li>
+            <li>3. Hobby-Content-Creator</li>
+        </ul>
+        
+        <p><strong>Geographischer Fokus:</strong></p>
+        <p>Zunächst auf den Raum Berlin beschränkt</p>
+        
+        <p><strong>Places</strong> bietet eine zielgerichtete und einfache Suche nach geeigneten Drehorten. Das Finden des perfekten Drehortes kann ein zeitaufwändiger und kostspieliger Prozess sein, insbesondere wenn viele beliebte Orte teure Drehgenehmigungen erfordern. Unsere Plattform vereinfacht das Location-Scouting durch:</p>
+        
+        <ul>
+            <li><strong>1. Umfassende Datenbank:</strong> Zugriff auf eine Vielzahl potenzieller Dreh- und Fotolocations, die speziell auf Ihre Bedürfnisse zugeschnitten sind.</li>
+            <li><strong>2.
