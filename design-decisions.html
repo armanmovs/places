@@ -159,23 +159,9 @@
         <h2 id="Zweite Phase">Zweite Phase</h2>
         <p>Die zweite Phase begann am 15. Juli. In dieser Phase wurde die Datenbank vollständig gefüllt, der Code für die Favoriten-Seite geschrieben, das Tagging-System für die Locationsuche implementiert und Pop-up-Fenster für jede Location erstellt. Außerdem wurde die Webseite mit der Dokumentation erstellt.</p>
         
-      <h1 id="App Architecture">App Architecture</h1>
-<p><strong>Client-Side</strong></p>
-<ul>
-    <li><strong>JavaScript</strong>: Wird für die DOM-Manipulation, Ereignisbehandlung und asynchrone HTTP-Anfragen verwendet.</li>
-    <li><strong>HTML</strong>: Bietet die Struktur für die Seiten, einschließlich modaler Dialoge und Formulare für Anmeldung und Registrierung.</li>
-    <li><strong>CSS</strong>: Stilt die Elemente, einschließlich der Filterleiste, Schaltflächen, Dialoge und Karte.</li>
-    <li><strong>Mapbox GL JS</strong>: Für interaktive Karten, Benutzerstandortvisualisierung und geografische Funktionen.</li>
-    <li><strong>Firebase</strong>: Für Authentifizierung und Echtzeit-Datenbankfunktionen.</li>
-</ul>
+      
 
-<p><strong>Server-Side</strong></p>
-<ul>
-    <li><strong>Flask</strong>: (Anhand der Vorlagentags und Struktur angenommen) Für die Handhabung von Routing, Rendering von Vorlagen und Bereitstellung statischer Dateien.</li>
-    <li><strong>Firebase</strong>: Backend-Dienste zur Speicherung von Benutzerdaten, Verwaltung der Authentifizierung und Synchronisierung von Benutzeraktionen mit der Datenbank.</li>
-</ul>
-
-<h2 id="Design Decisions">Design Decisions</h2>
+<h1 id="Design Decisions">Design Decisions</h1>
 <p><strong>Client-Side</strong></p>
 <ul>
     <li><strong>Event Listeners</strong>: Umfangreich verwendet, um Benutzerinteraktionen wie Klicks, Eingabeänderungen und Laden von DOM-Inhalten zu behandeln.</li>
@@ -191,25 +177,14 @@
     <li><strong>Carousel</strong>: Zum Anzeigen mehrerer Bilder innerhalb von Standortvorschauen auf eine elegante und benutzerfreundliche Weise.</li>
 </ul>
 
-<p><strong>Firebase</strong></p>
-<ul>
-    <li><strong>Authentication</strong>: Verwalten von Benutzeranmeldungen und -registrierungen und gewährleisten des sicheren Zugriffs auf personalisierte Funktionen.</li>
-    <li><strong>Real-Time Database</strong>: Speichert Benutzerdaten wie Profilinformationen und Standortpräferenzen und ermöglicht die Echtzeit-Synchronisierung über Geräte hinweg.</li>
-</ul>
-
-<h2 id="Key Solutions">Key Solutions</h2>
-<p><strong>User Authentication and Data Management</strong></p>
-<ul>
-    <li><strong>Firebase Auth and Database Integration</strong>: Stellt sicher, dass Benutzerdaten sicher gespeichert und leicht zugänglich sind. Benutzeraktionen wie Anmeldung, Registrierung und letzte Anmeldeaktualisierungen werden nahtlos verarbeitet.</li>
-    <li><strong>Error Handling</strong>: Warnt Benutzer, alle Felder auszufüllen, und zeigt Fehlernachrichten von Firebase an, um Benutzeraktionen zu leiten.</li>
-</ul>
-
+<h2 id="Geo">Geolocation</h2>
 <p><strong>Geolocation and Map Visualization</strong></p>
 <ul>
     <li><strong>Mapbox Integration</strong>: Bietet ein reichhaltiges interaktives Kartenerlebnis mit Funktionen wie Benutzerstandortmarkierungen, einstellbaren Radiuskreisen für Filterung und dynamischer Kartengrößenanpassung.</li>
     <li><strong>Geolocation Handling</strong>: Speichert und ruft den Benutzerstandort aus dem lokalen Speicher ab, wodurch personalisierte Kartenansichten und Filter ermöglicht werden.</li>
 </ul>
 
+<h2 id="UI/UX">UI/UX</h2>
 <p><strong>UI/UX Enhancements</strong></p>
 <ul>
     <li><strong>Dynamic Dialogs</strong>: Modulare Dialoge, die durch Filtertasten ausgelöst werden, sorgen für eine saubere und organisierte Benutzeroberfläche. Sie sind relativ zu ihren Auslösern positioniert und können leicht geschlossen werden.</li>
