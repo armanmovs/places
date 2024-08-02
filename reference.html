@@ -119,7 +119,7 @@
                 ausgewählten Tags und dem maximalen Entfernungsradius gefiltert werden. Bei POST-Anfragen werden
                 Filterkriterien wie Tags und Entfernung aktualisiert.</p>
             <p><strong>Beispielausgabe:</strong></p>
-            <pre><code>GET /: Gibt die HTML-Seite zurück, die die gefilterten Orte und deren Bilder anzeigt. Die Tags werden basierend auf den Benutzereinstellungen und den ausgewählten Filtern gefiltert.</code></pre>
+            <p>GET /: Gibt die HTML-Seite zurück, die die gefilterten Orte und deren Bilder anzeigt. Die Tags werden basierend auf den Benutzereinstellungen und den ausgewählten Filtern gefiltert.</p>
 
             <h2 id="recieveTags">Tags Empfang</h2>
             <h3>Abschnitt / Modul: Tag-Verarbeitung</h3>
@@ -128,7 +128,7 @@
             <p><strong>Zweck:</strong> Diese Route empfängt Filterkriterien wie Tags und maximale Entfernung vom
                 Benutzer und aktualisiert die globalen Filtereinstellungen.</p>
             <p><strong>Beispielausgabe:</strong></p>
-            <pre><code>POST /recieveTags: {"tags": ["Park", "Museum"], "max_distance": 5, "user_lat": 52.52, "user_lon": 13.405}</code></pre>
+            <p>POST /recieveTags: {"tags": ["Park", "Museum"], "max_distance": 5, "user_lat": 52.52, "user_lon": 13.405}</p>
 
             <h2 id="login">Login</h2>
             <h3>Abschnitt / Modul: Authentifizierung</h3>
@@ -137,7 +137,7 @@
             <p><strong>Zweck:</strong> Die Login-Seite zeigt ein Login-Formular an. Bei POST-Anfragen wird der
                 Benutzer authentifiziert.</p>
             <p><strong>Beispielausgabe:</strong></p>
-            <pre><code>GET /login: Gibt die HTML-Seite mit dem Login-Formular zurück.</code></pre>
+            <p>GET /login: Gibt die HTML-Seite mit dem Login-Formular zurück.</p>
 
             <h2 id="registration">Registrierung</h2>
             <h3>Abschnitt / Modul: Authentifizierung</h3>
@@ -146,7 +146,7 @@
             <p><strong>Zweck:</strong> Die Registrierungsseite zeigt ein Registrierungsformular an. Bei
                 POST-Anfragen wird ein neuer Benutzer erstellt.</p>
             <p><strong>Beispielausgabe:</strong></p>
-            <pre><code>GET /registration: Gibt die HTML-Seite mit dem Registrierungsformular zurück.</code></pre>
+            <p>GET /registration: Gibt die HTML-Seite mit dem Registrierungsformular zurück.</p>
 
             <h2 id="favorites">Favoriten</h2>
             <h3>Abschnitt / Modul: Favoritenverwaltung</h3>
@@ -155,7 +155,7 @@
             <p><strong>Zweck:</strong> Zeigt die Favoriten des angemeldeten Benutzers an. Wenn der Benutzer nicht
                 angemeldet ist, wird er auf die Login-Seite weitergeleitet.</p>
             <p><strong>Beispielausgabe:</strong></p>
-            <pre><code>GET /favorites: Gibt die HTML-Seite zurück, die die Favoriten des Benutzers anzeigt. Der Benutzer muss angemeldet sein.</code></pre>
+            <p>GET /favorites: Gibt die HTML-Seite zurück, die die Favoriten des Benutzers anzeigt. Der Benutzer muss angemeldet sein. </p>
 
             <h2 id="create_user">Benutzer erstellen</h2>
             <h3>Abschnitt / Modul: Authentifizierung</h3>
@@ -164,7 +164,7 @@
             <p><strong>Zweck:</strong> Diese Route erstellt einen neuen Benutzer in Firebase Auth und speichert die
                 Benutzerdaten in der Firebase-Datenbank.</p>
             <p><strong>Beispielausgabe:</strong></p>
-            <pre><code>POST /create_user: {"email": "user@example.com", "password": "securepassword", "full_name": "John Doe"}</code></pre>
+             <p>POST /create_user: {"email": "user@example.com", "password": "securepassword", "full_name": "John Doe"} </p>
 
             <h2 id="login_user">Benutzer-Login</h2>
             <h3>Abschnitt / Modul: Authentifizierung</h3>
@@ -173,7 +173,7 @@
             <p><strong>Zweck:</strong> Diese Route authentifiziert den Benutzer und speichert die Benutzerdaten in
                 der Session.</p>
             <p><strong>Beispielausgabe:</strong></p>
-            <pre><code>POST /login_user: {"email": "user@example.com", "password": "securepassword"}</code></pre>
+             <p>POST /login_user: {"email": "user@example.com", "password": "securepassword"} <p>
 
             <h2 id="logout">Logout</h2>
             <h3>Abschnitt / Modul: Authentifizierung</h3>
@@ -182,7 +182,7 @@
             <p><strong>Zweck:</strong> Meldet den Benutzer ab, indem die Session gelöscht wird, und leitet ihn
                 zurück zur Startseite.</p>
             <p><strong>Beispielausgabe:</strong></p>
-            <pre><code>GET /logout: Leitet den Benutzer zur Startseite weiter und löscht die Session-Daten.</code></pre>
+             <p>GET /logout: Leitet den Benutzer zur Startseite weiter und löscht die Session-Daten. <p>
 
             <h2 id="set_favorite">Favorit hinzufügen</h2>
             <h3>Abschnitt / Modul: Favoritenverwaltung</h3>
@@ -191,7 +191,7 @@
             <p><strong>Zweck:</strong> Diese Route fügt eine Location zur Liste der Favoriten des Benutzers hinzu.
                 Der Benutzer muss angemeldet sein.</p>
             <p><strong>Beispielausgabe:</strong></p>
-            <pre><code>POST /set_favorite: {"favorite": "location_id"}</code></pre>
+            <p>POST /set_favorite: {"favorite": "location_id"} </p>
 
             <h2 id="delete_favorite">Favorit entfernen</h2>
             <h3>Abschnitt / Modul: Favoritenverwaltung</h3>
@@ -200,7 +200,7 @@
             <p><strong>Zweck:</strong> Diese Route entfernt eine Location aus der Liste der Favoriten des Benutzers.
                 Der Benutzer muss angemeldet sein.</p>
             <p><strong>Beispielausgabe:</strong></p>
-            <pre><code>POST /delete_favorite: {"favorite": "location_id"}</code></pre>
+            <p>POST /delete_favorite: {"favorite": "location_id"} <p>
         </div>
 
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
