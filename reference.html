@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Places</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            font-size: 16px;
+        }
+
+        ul,
+        ol {
+            font-size: 16px;
+        }
+
+        .container img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* Menu styles */
+        .menu {
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        .menu ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu ul li {
+            float: left;
+        }
+
+        .menu ul li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .menu ul li a:hover {
+            background-color: #111;
+        }
+
+        .menu ul li ul {
+            display: none;
+            position: absolute;
+            background-color: #333;
+        }
+
+        .menu ul li:hover ul {
+            display: block;
+        }
+
+        .menu ul li ul li {
+            float: none;
+        }
+
+        .menu ul li ul li a {
+            padding: 12px 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Menu -->
+    <div class="menu">
+        <ul>
+            <li><a href="project-description.html">Projektbeschreibung</a></li>
+            <li>
+                <a href="timeline.html">Zeitplan</a>
+            </li>
+            <li>
+                <a href="value-proposition.html">Value Proposition</a>
+            </li>
+            <li>
+                <a href="architecture.html">Architecture</a>
+            </li>
+            <li>
+                <a href="datamodel.html">Data Model</a>
+            </li>
+
+            <li>
+                <a href="design-decisions.html">Design Decisions</a>
+            </li>
+            <li>
+                <a href="User-Evaluation.html">User-Evaluation</a>
+            </li>
+            <li>
+                <a href="Team-Evaluation.html">Team-Evaluation</a>
+            </li>
+            <li>
+                <a href="reference.html">Referenz</a>
+            </li>
+
+        </ul>
+    </div>
+
+    <body>
+
+        <div class="container">
+            <h1>Referenzdokumentation</h1>
+
+            <h2 id="index">Startseite</h2>
+            <h3>Abschnitt / Modul: Hauptansicht</h3>
+            <p><strong>Route:</strong> /</p>
+            <p><strong>Methoden:</strong> GET, POST</p>
+            <p><strong>Zweck:</strong> Die Startseite zeigt eine Liste von Orten an, die nach den vom Benutzer
+                ausgewählten Tags und dem maximalen Entfernungsradius gefiltert werden. Bei POST-Anfragen werden
+                Filterkriterien wie Tags und Entfernung aktualisiert.</p>
+            <p><strong>Beispielausgabe:</strong></p>
+            <p>GET /: Gibt die HTML-Seite zurück, die die gefilterten Orte und deren Bilder anzeigt. Die Tags werden basierend auf den Benutzereinstellungen und den ausgewählten Filtern gefiltert.</p>
+
+            <h2 id="recieveTags">Tags Empfang</h2>
+            <h3>Abschnitt / Modul: Tag-Verarbeitung</h3>
+            <p><strong>Route:</strong> /recieveTags</p>
+            <p><strong>Methoden:</strong> POST</p>
+            <p><strong>Zweck:</strong> Diese Route empfängt Filterkriterien wie Tags und maximale Entfernung vom
+                Benutzer und aktualisiert die globalen Filtereinstellungen.</p>
+            <p><strong>Beispielausgabe:</strong></p>
+            <p>POST /recieveTags: {"tags": ["Park", "Museum"], "max_distance": 5, "user_lat": 52.52, "user_lon": 13.405}</p>
+
+            <h2 id="login">Login</h2>
+            <h3>Abschnitt / Modul: Authentifizierung</h3>
+            <p><strong>Route:</strong> /login</p>
+            <p><strong>Methoden:</strong> GET, POST</p>
+            <p><strong>Zweck:</strong> Die Login-Seite zeigt ein Login-Formular an. Bei POST-Anfragen wird der
+                Benutzer authentifiziert.</p>
+            <p><strong>Beispielausgabe:</strong></p>
+            <p>GET /login: Gibt die HTML-Seite mit dem Login-Formular zurück.</p>
+
+            <h2 id="registration">Registrierung</h2>
+            <h3>Abschnitt / Modul: Authentifizierung</h3>
+            <p><strong>Route:</strong> /registration</p>
+            <p><strong>Methoden:</strong> GET, POST</p>
+            <p><strong>Zweck:</strong> Die Registrierungsseite zeigt ein Registrierungsformular an. Bei
+                POST-Anfragen wird ein neuer Benutzer erstellt.</p>
+            <p><strong>Beispielausgabe:</strong></p>
+            <p>GET /registration: Gibt die HTML-Seite mit dem Registrierungsformular zurück.</p>
+
+            <h2 id="favorites">Favoriten</h2>
+            <h3>Abschnitt / Modul: Favoritenverwaltung</h3>
+            <p><strong>Route:</strong> /favorites</p>
+            <p><strong>Methoden:</strong> GET</p>
+            <p><strong>Zweck:</strong> Zeigt die Favoriten des angemeldeten Benutzers an. Wenn der Benutzer nicht
+                angemeldet ist, wird er auf die Login-Seite weitergeleitet.</p>
+            <p><strong>Beispielausgabe:</strong></p>
+            <p>GET /favorites: Gibt die HTML-Seite zurück, die die Favoriten des Benutzers anzeigt. Der Benutzer muss angemeldet sein. </p>
+
+            <h2 id="create_user">Benutzer erstellen</h2>
+            <h3>Abschnitt / Modul: Authentifizierung</h3>
+            <p><strong>Route:</strong> /create_user</p>
+            <p><strong>Methoden:</strong> POST</p>
+            <p><strong>Zweck:</strong> Diese Route erstellt einen neuen Benutzer in Firebase Auth und speichert die
+                Benutzerdaten in der Firebase-Datenbank.</p>
+            <p><strong>Beispielausgabe:</strong></p>
+             <p>POST /create_user: {"email": "user@example.com", "password": "securepassword", "full_name": "John Doe"} </p>
+
+            <h2 id="login_user">Benutzer-Login</h2>
+            <h3>Abschnitt / Modul: Authentifizierung</h3>
+            <p><strong>Route:</strong> /login_user</p>
+            <p><strong>Methoden:</strong> POST</p>
+            <p><strong>Zweck:</strong> Diese Route authentifiziert den Benutzer und speichert die Benutzerdaten in
+                der Session.</p>
+            <p><strong>Beispielausgabe:</strong></p>
+             <p>POST /login_user: {"email": "user@example.com", "password": "securepassword"} <p>
+
+            <h2 id="logout">Logout</h2>
+            <h3>Abschnitt / Modul: Authentifizierung</h3>
+            <p><strong>Route:</strong> /logout</p>
+            <p><strong>Methoden:</strong> GET</p>
+            <p><strong>Zweck:</strong> Meldet den Benutzer ab, indem die Session gelöscht wird, und leitet ihn
+                zurück zur Startseite.</p>
+            <p><strong>Beispielausgabe:</strong></p>
+             <p>GET /logout: Leitet den Benutzer zur Startseite weiter und löscht die Session-Daten. <p>
+
+            <h2 id="set_favorite">Favorit hinzufügen</h2>
+            <h3>Abschnitt / Modul: Favoritenverwaltung</h3>
+            <p><strong>Route:</strong> /set_favorite</p>
+            <p><strong>Methoden:</strong> POST</p>
+            <p><strong>Zweck:</strong> Diese Route fügt eine Location zur Liste der Favoriten des Benutzers hinzu.
+                Der Benutzer muss angemeldet sein.</p>
+            <p><strong>Beispielausgabe:</strong></p>
+            <p>POST /set_favorite: {"favorite": "location_id"} </p>
+
+            <h2 id="delete_favorite">Favorit entfernen</h2>
+            <h3>Abschnitt / Modul: Favoritenverwaltung</h3>
+            <p><strong>Route:</strong> /delete_favorite</p>
+            <p><strong>Methoden:</strong> POST</p>
+            <p><strong>Zweck:</strong> Diese Route entfernt eine Location aus der Liste der Favoriten des Benutzers.
+                Der Benutzer muss angemeldet sein.</p>
+            <p><strong>Beispielausgabe:</strong></p>
+            <p>POST /delete_favorite: {"favorite": "location_id"} <p>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </body>
+
+</html>
+
+</div>
+</body>
+
+</html>
