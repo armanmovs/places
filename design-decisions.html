@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,28 +11,35 @@
             font-family: 'Arial', sans-serif;
             font-size: 16px;
         }
-        ul, ol {
+
+        ul,
+        ol {
             font-size: 16px;
         }
+
         .container img {
             max-width: 100%;
             height: auto;
             display: block;
             margin: 0 auto;
         }
+
         /* Menu styles */
         .menu {
             background-color: #333;
             overflow: hidden;
         }
+
         .menu ul {
             list-style-type: none;
             margin: 0;
             padding: 0;
         }
+
         .menu ul li {
             float: left;
         }
+
         .menu ul li a {
             display: block;
             color: white;
@@ -39,28 +47,34 @@
             padding: 14px 16px;
             text-decoration: none;
         }
+
         .menu ul li a:hover {
             background-color: #111;
         }
+
         .menu ul li ul {
             display: none;
             position: absolute;
             background-color: #333;
         }
+
         .menu ul li:hover ul {
             display: block;
         }
+
         .menu ul li ul li {
             float: none;
         }
+
         .menu ul li ul li a {
             padding: 12px 16px;
         }
     </style>
 </head>
+
 <body>
     <!-- Menu -->
-      <div class="menu">
+    <div class="menu">
         <ul>
             <li><a href="project-description.html">Projektbeschreibung</a></li>
             <li>
@@ -69,70 +83,106 @@
             <li>
                 <a href="value-proposition.html">Value Proposition</a>
             </li>
-               <li>
+            <li>
                 <a href="architecture.html">Architecture</a>
             </li>
-               <li>
+            <li>
                 <a href="datamodel.html">Data Model</a>
             </li>
-               
+
             <li>
                 <a href="design-decisions.html">Design Decisions</a>
             </li>
             <li>
                 <a href="User-Evaluation.html">User-Evaluation</a>
             </li>
-             <li>
+            <li>
                 <a href="Team-Evaluation.html">Team-Evaluation</a>
             </li>
             <li>
                 <a href="reference.html">Referenz</a>
             </li>
-            
+
         </ul>
     </div>
     <div class="container">
-        
 
-<h1 id="Design Decisions">Design Decisions</h1>
-<h2 id="Client Side">Client-Side</h2>
-<ul>
-    <li><strong>Event Listeners</strong>: Umfangreich verwendet, um Benutzerinteraktionen wie Klicks, Eingabeänderungen und Laden von DOM-Inhalten zu behandeln.</li>
-    <li><strong>Fetch API</strong>: Wird für HTTP-Anfragen an den Server verwendet, um eine nahtlose Benutzererfahrung mit asynchronen Operationen zu gewährleisten.</li>
-    <li><strong>Geolocation</strong>: Nutzt die Geolocation-API des Browsers, um den Standort des Benutzers zu erfassen und zu speichern, was die Personalisierungsfunktionen der App verbessert.</li>
-    <li><strong>Mapbox Integration</strong>: Bietet eine leistungsstarke und interaktive Kartenoberfläche, damit Benutzer Standorte visualisieren und geografische Filter anwenden können.</li>
-</ul>
 
-<p><strong>UI Components</strong></p>
-<ul>
-    <li><strong>Filter Bar</strong>: Ermöglicht es Benutzern, Standorte basierend auf verschiedenen Kriterien (geografischer Radius, Typ, Thema, Anwendungsfall) zu filtern. Jede Filtertaste löst einen Dialog für detaillierte Auswahlen aus.</li>
-    <li><strong>Modals</strong>: Werden für die Anmeldung, Registrierung und Anzeige detaillierter Standortvorschauen mit Bildern verwendet. Dies verbessert die Benutzererfahrung, indem mehr Informationen bereitgestellt werden, ohne die Hauptseite zu verlassen.</li>
-    <li><strong>Carousel</strong>: Zum Anzeigen mehrerer Bilder innerhalb von Standortvorschauen auf eine elegante und benutzerfreundliche Weise.</li>
-</ul>
+        <h1 id="Design Decisions">Design Decisions</h1>
+        <h2 id="Client Side">Client-Side</h2>
+        <ul>
+            <li><strong>Event Listeners</strong>: Umfangreich verwendet, um Benutzerinteraktionen wie Klicks,
+                Eingabeänderungen und Laden von DOM-Inhalten zu behandeln.</li>
+            <li><strong>Fetch API</strong>: Wird für HTTP-Anfragen an den Server verwendet, um eine nahtlose
+                Benutzererfahrung mit asynchronen Operationen zu gewährleisten.</li>
+            <li><strong>Geolocation</strong>: Nutzt die Geolocation-API des Browsers, um den Standort des Benutzers zu
+                erfassen und zu speichern, was die Personalisierungsfunktionen der App verbessert.</li>
+            <li><strong>Mapbox Integration</strong>: Bietet eine leistungsstarke und interaktive Kartenoberfläche, damit
+                Benutzer Standorte visualisieren und geografische Filter anwenden können.</li>
+        </ul>
 
-<h2 id="Geo">Geolocation</h2>
-<p><strong>Geolocation and Map Visualization</strong></p>
-<ul>
-    <li><strong>Mapbox Integration</strong>: Bietet ein reichhaltiges interaktives Kartenerlebnis mit Funktionen wie Benutzerstandortmarkierungen, einstellbaren Radiuskreisen für Filterung und dynamischer Kartengrößenanpassung.</li>
-    <li><strong>Geolocation Handling</strong>: Speichert und ruft den Benutzerstandort aus dem lokalen Speicher ab, wodurch personalisierte Kartenansichten und Filter ermöglicht werden.</li>
-</ul>
+        <p><strong>UI Components</strong></p>
+        <ul>
+            <li><strong>Filter Bar</strong>: Ermöglicht es Benutzern, Standorte basierend auf verschiedenen Kriterien
+                (geografischer Radius, Typ, Thema, Anwendungsfall) zu filtern. Jede Filtertaste löst einen Dialog für
+                detaillierte Auswahlen aus.</li>
+            <li><strong>Modals</strong>: Werden für die Anmeldung, Registrierung und Anzeige detaillierter
+                Standortvorschauen mit Bildern verwendet. Dies verbessert die Benutzererfahrung, indem mehr
+                Informationen bereitgestellt werden, ohne die Hauptseite zu verlassen.</li>
+            <li><strong>Carousel</strong>: Zum Anzeigen mehrerer Bilder innerhalb von Standortvorschauen auf eine
+                elegante und benutzerfreundliche Weise.</li>
+        </ul>
 
-<h2 id="UI/UX">UI/UX</h2>
-<p><strong>UI/UX Enhancements</strong></p>
-<ul>
-    <li><strong>Dynamic Dialogs</strong>: Modulare Dialoge, die durch Filtertasten ausgelöst werden, sorgen für eine saubere und organisierte Benutzeroberfläche. Sie sind relativ zu ihren Auslösern positioniert und können leicht geschlossen werden.</li>
-    <li><strong>Interactive Elements</strong>: Schieberegler zur Anpassung des Radius, Karussells für Bildvorschauen und reaktionsschnelle Schaltflächen verbessern die Interaktivität und Benutzerbindung der App.</li>
-</ul>
+        <h2 id="Geo">Geolocation</h2>
+        <p><strong>Geolocation and Map Visualization</strong></p>
+        <ul>
+            <li><strong>Mapbox Integration</strong>: Da sich unsere Website mit realen Orten befasst, war es naheliegend
+                diese auf einer Karte zu Visualieren. Da die Google API Kostenpflichtig ist haben wir uns nach einer
+                weiteren Möglichkeit gesucht, woraufhin wir auf mapbox gestoßen sind. Die mapbox API wird direkt in JS
+                implementiert und in HTML verankert. Sie ermöglicht uns eine genaue und einfache darstellung der
+                Userlocation und Orte in unserer App</li>
+            <li><strong>Geolocation Handling</strong>: Nach dem initialen Laden der Website wird die Geolocation des
+                Users
+                per JavaScript ausgelesen und per post anfrage an den server geschickt. Der Server verarbeitet die
+                Location und errechnet folgend die Distanzen zu den verschiedenen Orten, indem wir die longitude und
+                latitude der Locations aus der DB zusammen mit der User longitude und latitude in die Haversine-Formel
+                einsetzen</li>
+        </ul>
 
-<p><strong>Responsive Design</strong></p>
-<ul>
-    <li><strong>CSS Styling</strong>: Stellt sicher, dass die Benutzeroberfläche auf verschiedenen Geräten benutzerfreundlich ist, wobei Komponenten wie Filterleisten, Schaltflächen und Karussells für Reaktionsfähigkeit und Benutzerfreundlichkeit gestaltet sind.</li>
-</ul>
+        <h2 id="UI/UX">UI/UX</h2>
+        <p><strong>UI/UX Enhancements</strong></p>
+        <ul>
+            <li><strong>Dynamic Dialogs</strong>: Modulare Dialoge, die durch Filtertasten ausgelöst werden, sorgen für
+                eine saubere und organisierte Benutzeroberfläche. Sie sind relativ zu ihren Auslösern positioniert und
+                können leicht geschlossen werden. Hierdurch ermöglichen wir ein überschaubares gesamtbild und verhindern
+                mögliche Verwirrung beim ersten aufrufen der Website</li>
+            <li><strong>Interactive Elements</strong>: Schieberegler zur Anpassung des Radius, Karussells für
+                Bildvorschauen und reaktionsschnelle Schaltflächen verbessern die Interaktivität und Benutzerbindung der
+                App und tragen zur Visuellen darstellung bei</li>
+        </ul>
 
-<p><strong>Modular Code Structure</strong></p>
-<ul>
-    <li><strong>Separation of Concerns</strong>: JavaScript-Funktionen sind modular und konzentrieren sich auf spezifische Aufgaben wie Karteninitialisierung, Anfragenverarbeitung und UI-Aktualisierungen. Dies verbessert die Wartbarkeit und Lesbarkeit des Codes.</li>
-</ul>
+        <p><strong>Responsive Design</strong></p>
+        <ul>
+            <li><strong>CSS Styling</strong>: Stellt sicher, dass die Benutzeroberfläche auf verschiedenen Geräten
+                benutzerfreundlich ist, wobei Komponenten wie Filterleisten, Schaltflächen und Karussells für
+                Reaktionsfähigkeit und Benutzerfreundlichkeit gestaltet sind.</li>
+            <li><strong>Bootstrap</strong>: Mit Bootstrap erreichen wir, das unsere Locations automatisch in Spalten und
+                Zeilen eingeteilt werden. Die Anzahl dieser wird auf basis der Bildschirmgröße entschieden, somit
+                entsteht ein Responsives und sauberes Design für verschiedene Bildschirmgrößen</li>
+
+        </ul>
+
+        <p><strong>Modular Code Structure</strong></p>
+        <ul>
+            <li><strong>Separation of Concerns</strong>: JavaScript-Funktionen sind modular und konzentrieren sich auf
+                spezifische Aufgaben wie Karteninitialisierung, Anfragenverarbeitung und UI-Aktualisierungen. Dies
+                verbessert die Wartbarkeit und Lesbarkeit des Codes.</li>
+            <li><strong>HTML Templates</strong>: Wir haben einszelne Elemente, wie z.B. die Filter Bar, Location Preview
+                oder den Header in seperate Dateien geschrieben, um so ein mosulares Zusammenstellen der einzelnen
+                Screen zu ermöglichen. Zudem ermöglicht uns dieser Ansatz einzelne Elemente ohne viel Aufwand
+                wiederzuverwenden.</li>
+        </ul>
     </div>
 </body>
+
 </html>

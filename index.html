@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,28 +11,35 @@
             font-family: 'Arial', sans-serif;
             font-size: 16px;
         }
-        ul, ol {
+
+        ul,
+        ol {
             font-size: 16px;
         }
+
         .container img {
             max-width: 100%;
             height: auto;
             display: block;
             margin: 0 auto;
         }
+
         /* Menu styles */
         .menu {
             background-color: #333;
             overflow: hidden;
         }
+
         .menu ul {
             list-style-type: none;
             margin: 0;
             padding: 0;
         }
+
         .menu ul li {
             float: left;
         }
+
         .menu ul li a {
             display: block;
             color: white;
@@ -39,28 +47,34 @@
             padding: 14px 16px;
             text-decoration: none;
         }
+
         .menu ul li a:hover {
             background-color: #111;
         }
+
         .menu ul li ul {
             display: none;
             position: absolute;
             background-color: #333;
         }
+
         .menu ul li:hover ul {
             display: block;
         }
+
         .menu ul li ul li {
             float: none;
         }
+
         .menu ul li ul li a {
             padding: 12px 16px;
         }
     </style>
 </head>
+
 <body>
     <!-- Menu -->
-      <div class="menu">
+    <div class="menu">
         <ul>
             <li><a href="project-description.html">Projektbeschreibung</a></li>
             <li>
@@ -69,26 +83,26 @@
             <li>
                 <a href="value-proposition.html">Value Proposition</a>
             </li>
-               <li>
+            <li>
                 <a href="architecture.html">Architecture</a>
             </li>
-               <li>
+            <li>
                 <a href="datamodel.html">Data Model</a>
             </li>
-               
+
             <li>
                 <a href="design-decisions.html">Design Decisions</a>
             </li>
             <li>
                 <a href="User-Evaluation.html">User-Evaluation</a>
             </li>
-             <li>
+            <li>
                 <a href="Team-Evaluation.html">Team-Evaluation</a>
             </li>
             <li>
                 <a href="reference.html">Referenz</a>
             </li>
-            
+
         </ul>
     </div>
 
@@ -98,17 +112,47 @@
         <p><strong>Arbeit ausgeführt von:</strong></p>
         <p>Arman Movsisian (Matrikelnummer 77211975011)</p>
         <p>Lasse Barke (Matrikelnummer 77211920273)</p>
-        <p>Präsentation: <a href="https://hwrberlinde-my.sharepoint.com/:p:/g/personal/s_barke21_hwr-berlin_de/Ec_f3NTRYuZCqS2hHwFSSlkBhVilhOQ2ULooo7INq1zbBQ?e=vE3Xy3">Places</a></p>
+        <p>Präsentation: <a
+                href="https://hwrberlinde-my.sharepoint.com/:p:/g/personal/s_barke21_hwr-berlin_de/Ec_f3NTRYuZCqS2hHwFSSlkBhVilhOQ2ULooo7INq1zbBQ?e=vE3Xy3">Places</a>
+        </p>
         <p><strong>Eidesstattliche Erklärung</strong></p>
 
         <p>Die genannten Teammitglieder erklären an Eides statt:</p>
 
-        <p>Diese Arbeit wurde selbständig und eigenhändig erstellt. Die den benutzten Quellen wörtlich oder inhaltlich entnommenen Stellen sind als solche kenntlich gemacht. Diese Erklärung gilt für jeglichen Inhalt und umfasst sowohl diese Dokumentation als auch den als Projektergebnis eingereichten Quellcode.</p>
+        <p>Diese Arbeit wurde selbständig und eigenhändig erstellt. Die den benutzten Quellen wörtlich oder inhaltlich
+            entnommenen Stellen sind als solche kenntlich gemacht. Diese Erklärung gilt für jeglichen Inhalt und umfasst
+            sowohl diese Dokumentation als auch den als Projektergebnis eingereichten Quellcode.</p>
 
-      <h1 id="Projektbeschreibung">Projektbeschreibung</h1>
-        <p>Places ist eine Web Anwendung, welche vom grundlegenden Design an Airbnb o.ä. erinnert. Das Ziel ist es, alle potenziell interessanten Locations in einer App zu vereinen und mit einem Suchalgorithmus zugänglich zu machen. Dies erreichen wir, indem wir mit der App alle interessanten Drehorte in einem Interface darstellen und sie mit Tags versehen. Die Tags helfen dann dabei, mit einem Filter nur die Orte herauszusuchen, welche für den jeweiligen Dreh oder das Shooting passend sind. Neben den Filtern gibt es zahlreiche weitere Funktionen, um z.B. die Adresse, den Preis etc. einzusehen oder eigene Orte hochzuladen.</p>
-        
-        
+        <h1 id="Projektbeschreibung">Projektbeschreibung</h1>
+
+        <h2>Das Problem</h2>
+        <p>Jede Content schaffende Person im Bereich der Musikvideos benötigt für eigentlich jedes Projekt 3 Dinge:</p>
+        <ol>
+            <li>Das Equipment</li>
+            <li>Den Künstler</li>
+            <li>≥ 1 Drehort</li>
+        </ol>
+        <p>Vor allem der 3. Punkt gestaltet sich gerade für kleine Produktionen häufig am schwierigsten, da für viele
+            beliebte Drehorte eine Drehgenehmigung erforderlich ist, welche wiederum hohe Kosten verursacht oder ein
+            extremer Zeitaufwand für das Scouten der Locations drauf geht, bis man etwas einigermaßen Passendes gefunden
+            hat.</p>
+        <p>Aus eigener Erfahrung kann ich sagen, dass es oft darauf hinausläuft, dass man sich stundenlang durch die
+            Straßen Berlins und Umgebung begibt, um einen Ort zu finden, welcher zum Stil des Videos passt.</p>
+
+        <h2>Die Idee</h2>
+        <p>Für dieses Problem wäre eine Web-Anwendung optimal, welche vom grundlegenden Design an Airbnb o.ä. erinnert.
+            Das Ziel ist es, alle potenziell interessanten Locations in einer App zu vereinen und mit einem
+            Suchalgorithmus zugänglich zu machen. Dies erreichen wir, indem wir mit der App alle interessanten Drehorte
+            in einem Interface darstellen und sie mit Tags versehen. Die Tags helfen dann dabei, mit einem Filter nur
+            die Orte herauszusuchen, welche für den jeweiligen Dreh oder das Shooting passend sind. </p>
+        <h2>Die Zielgruppe</h2>
+        <p>Places adressiert kleine Filmproduktionen, Fotografen und Hobby Content Creator, welchen nur sehr wenig oder
+            gar kein Budget zur Verfügung steht, um ihre Projekte umzusetzen. Für den Anfang fokussieren wir uns auf den
+            Raum Berlin, sind uns aber über das Potenzial einer Skalierung in andere Städte oder Länder bewusst.</p>
+
+
+
     </div>
 </body>
+
 </html>

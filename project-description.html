@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,25 +11,30 @@
             font-family: 'Arial', sans-serif;
             font-size: 16px;
         }
+
         .container img {
             max-width: 100%;
             height: auto;
             display: block;
             margin: 0 auto;
         }
+
         /* Menu styles */
         .menu {
             background-color: #333;
             overflow: hidden;
         }
+
         .menu ul {
             list-style-type: none;
             margin: 0;
             padding: 0;
         }
+
         .menu ul li {
             float: left;
         }
+
         .menu ul li a {
             display: block;
             color: white;
@@ -36,28 +42,34 @@
             padding: 14px 16px;
             text-decoration: none;
         }
+
         .menu ul li a:hover {
             background-color: #111;
         }
+
         .menu ul li ul {
             display: none;
             position: absolute;
             background-color: #333;
         }
+
         .menu ul li:hover ul {
             display: block;
         }
+
         .menu ul li ul li {
             float: none;
         }
+
         .menu ul li ul li a {
             padding: 12px 16px;
         }
     </style>
 </head>
+
 <body>
     <!-- Menu -->
-      <div class="menu">
+    <div class="menu">
         <ul>
             <li><a href="project-description.html">Projektbeschreibung</a></li>
             <li>
@@ -66,29 +78,29 @@
             <li>
                 <a href="value-proposition.html">Value Proposition</a>
             </li>
-               <li>
+            <li>
                 <a href="architecture.html">Architecture</a>
             </li>
-               <li>
+            <li>
                 <a href="datamodel.html">Data Model</a>
             </li>
-               
+
             <li>
                 <a href="design-decisions.html">Design Decisions</a>
             </li>
             <li>
                 <a href="User-Evaluation.html">User-Evaluation</a>
             </li>
-             <li>
+            <li>
                 <a href="Team-Evaluation.html">Team-Evaluation</a>
             </li>
             <li>
                 <a href="reference.html">Referenz</a>
             </li>
-            
+
         </ul>
     </div>
-    
+
     <div class="container">
         <h1>Projektbeschreibung</h1>
         <h2>Inhaltsverzeichnis</h2>
@@ -98,30 +110,60 @@
             <li><a href="#ziel">Ziel</a></li>
         </ol>
 
-        <h2 id="problem">Problem</h2>
-        <p>In der Content-Erstellung, insbesondere im Bereich der Musikvideos, Fotografien und Filmproduktionen, ist die Suche nach geeigneten Drehorten eine häufige Herausforderung. Viele dieser Projekte benötigen mindestens einen geeigneten Drehort, der oft schwer zu finden ist. Beliebte Locations erfordern meist kostspielige Genehmigungen, und das Scouting nach neuen, passenden Orten nimmt viel Zeit in Anspruch. Kleine Produktionen und Hobby-Creator haben oft nicht die Ressourcen, um diesen Aufwand zu betreiben, was die Realisierung ihrer Projekte erschwert.</p>
+        <h1 id="Projektbeschreibung">Projektbeschreibung</h1>
 
-        <h2 id="idee">Idee</h2>
-      
-        <p>Unsere Idee besteht darin, eine kostenlose Website für Creator in Berlin zu schaffen, um sie als Kultur zu vereinen. Wir agieren lediglich als Vermittler zwischen den Besitzern von Locations und den Creators. In der Anfangsphase ist eine Monetarisierung des Projekts nicht von Interesse.</p>
+        <h2>Das Problem</h2>
+        <p>Jede Content schaffende Person im Bereich der Musikvideos benötigt für eigentlich jedes Projekt 3 Dinge:</p>
+        <ol>
+            <li>Das Equipment</li>
+            <li>Den Künstler</li>
+            <li>≥ 1 Drehort</li>
+        </ol>
+        <p>Vor allem der 3. Punkt gestaltet sich gerade für kleine Produktionen häufig am schwierigsten, da für viele
+            beliebte Drehorte eine Drehgenehmigung erforderlich ist, welche wiederum hohe Kosten verursacht oder ein
+            extremer Zeitaufwand für das Scouten der Locations drauf geht, bis man etwas einigermaßen Passendes gefunden
+            hat.</p>
+        <p>Aus eigener Erfahrung kann ich sagen, dass es oft darauf hinausläuft, dass man sich stundenlang durch die
+            Straßen Berlins und Umgebung begibt, um einen Ort zu finden, welcher zum Stil des Videos passt.</p>
 
-        <p>Wir sind ähnlich wie Airbnb, jedoch speziell für kreative Orte in Berlin. Unser Vorteil liegt darin, dass sowohl die Creator als auch die Location-Besitzer profitieren. Creators finden schneller die passenden Orte für ihre Projekte, und für die Besitzer bedeutet es kostenlose Werbung für ihre Locations.</p>
-
+        <h2>Die Idee</h2>
+        <p>Für dieses Problem wäre eine Web-Anwendung optimal, welche vom grundlegenden Design an Airbnb o.ä. erinnert.
+            Das Ziel ist es, alle potenziell interessanten Locations in einer App zu vereinen und mit einem
+            Suchalgorithmus zugänglich zu machen. Dies erreichen wir, indem wir mit der App alle interessanten Drehorte
+            in einem Interface darstellen und sie mit Tags versehen. Die Tags helfen dann dabei, mit einem Filter nur
+            die Orte herauszusuchen, welche für den jeweiligen Dreh oder das Shooting passend sind. </p>
+        <h2>Die Zielgruppe</h2>
+        <p>Places adressiert kleine Filmproduktionen, Fotografen und Hobby Content Creator, welchen nur sehr wenig oder
+            gar kein Budget zur Verfügung steht, um ihre Projekte umzusetzen. Für den Anfang fokussieren wir uns auf den
+            Raum Berlin, sind uns aber über das Potenzial einer Skalierung in andere Städte oder Länder bewusst.</p>
 
         <h2 id="ziel">Ziel</h2>
-        <p><strong>Unser Ziel</strong> ist es, unsere Webseite ständig zu verbessern und neue Funktionen hinzuzufügen. Geplante Funktionen umfassen:</p>
+        <p><strong>Unser Ziel</strong> ist es, unsere Webseite ständig zu verbessern und neue Funktionen hinzuzufügen.
+            Geplante Funktionen umfassen:</p>
         <ul>
-            <li><strong>Chat:</strong> Eine integrierte Chat-Funktion ermöglicht es Creators und Location-Besitzern, direkt über die Plattform zu kommunizieren, Details zu besprechen und Fragen zu klären.</li>
-            <li><strong>Rezensionen:</strong> Creators können Bewertungen und Rezensionen zu den Locations abgeben, was anderen Nutzern hilft, die Qualität und Eignung der Orte besser einzuschätzen.</li>
-            <li><strong>Werbungsfunktion:</strong> Location-Besitzer können ihre Orte gezielt bewerben, um mehr Aufmerksamkeit zu generieren und ihre Sichtbarkeit zu erhöhen.</li>
-            <li><strong>Eigene Places-Locations:</strong> Wir planen, exklusive Locations zu entwickeln und anzubieten, die nur über unsere Plattform buchbar sind. Diese speziellen Orte werden sorgfältig kuratiert, um den höchsten Ansprüchen gerecht zu werden.</li>
+            <li><strong>Filter Funktion:</strong>Die Filter Bar, welche das Filtern auf Basis von tags und geo Locations
+                ermöglicht</li>
+            <li><strong>Favoriten</strong>Die Möglichkeit gewünschte Locations zu Favorisieren und
+                einzusehen</li>
+            <li><strong>Datailierte Ansicht :</strong> Eine Detailierte Ansicht der jeweiligen Location mit weiteren
+                Infos </li>
+            <li><strong>Login/Register :</strong> Login und Registrierungsfunktion um die favoriten für den Nutzer zu
+                speichern</li>
+            <li><strong>Wegbeschreibung</strong> Eine Direkte Wegbeschreibung auf der Karte in der Detailansicht
+                einfügen </li>
+            <li><strong>Kalender und Buchungssystem</strong> Ein System um die Buchung von Locations zu ermöglichen und
+                Freie Slots in einem Kalender einzusehen</li>
+            <li><strong>Upload</strong> Eine Uploadfunktion für Nutzer um neue Locations hochzuladen </li>
         </ul>
 
-        <p>Das Projekt hat großes Potenzial, die kreative Community in Berlin zu stärken und zu unterstützen. Wir sind überzeugt, dass unsere Plattform eine wertvolle Ressource für alle Beteiligten sein wird und freuen uns darauf, kontinuierlich neue und innovative Funktionen einzuführen.</p>
-    
-        
-        
+        <p>Das Projekt hat großes Potenzial, die kreative Community in Berlin zu stärken und zu unterstützen. Wir sind
+            überzeugt, dass unsere Plattform eine wertvolle Ressource für alle Beteiligten sein wird und freuen uns
+            darauf, kontinuierlich neue und innovative Funktionen einzuführen.</p>
+
+
+
 
     </div>
 </body>
+
 </html>
