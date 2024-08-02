@@ -75,140 +75,142 @@
 <body>
     <!-- Menu -->
     <div class="menu">
-        <!DOCTYPE html>
-        <html lang="de">
+        <ul>
+            <li><a href="project-description.html">Projektbeschreibung</a></li>
+            <li>
+                <a href="timeline.html">Zeitplan</a>
+            </li>
+            <li>
+                <a href="value-proposition.html">Value Proposition</a>
+            </li>
+            <li>
+                <a href="architecture.html">Architecture</a>
+            </li>
+            <li>
+                <a href="datamodel.html">Data Model</a>
+            </li>
 
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Referenzdokumentation</title>
-            <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-        </head>
+            <li>
+                <a href="design-decisions.html">Design Decisions</a>
+            </li>
+            <li>
+                <a href="User-Evaluation.html">User-Evaluation</a>
+            </li>
+            <li>
+                <a href="Team-Evaluation.html">Team-Evaluation</a>
+            </li>
+            <li>
+                <a href="reference.html">Referenz</a>
+            </li>
 
-        <body>
-
-            <div class="container mt-5">
-                <h1>Referenzdokumentation</h1>
-                <h2>Inhaltsverzeichnis</h2>
-                <ul>
-                    <li><a href="#index">Startseite</a></li>
-                    <li><a href="#recieveTags">Tags Empfang</a></li>
-                    <li><a href="#login">Login</a></li>
-                    <li><a href="#registration">Registrierung</a></li>
-                    <li><a href="#favorites">Favoriten</a></li>
-                    <li><a href="#create_user">Benutzer erstellen</a></li>
-                    <li><a href="#login_user">Benutzer-Login</a></li>
-                    <li><a href="#logout">Logout</a></li>
-                    <li><a href="#set_favorite">Favorit hinzufügen</a></li>
-                    <li><a href="#delete_favorite">Favorit entfernen</a></li>
-                </ul>
-
-                <h2 id="index">Startseite</h2>
-                <h3>Abschnitt / Modul: Hauptansicht</h3>
-                <p><strong>Route:</strong> /</p>
-                <p><strong>Methoden:</strong> GET, POST</p>
-                <p><strong>Zweck:</strong> Die Startseite zeigt eine Liste von Orten an, die nach den vom Benutzer
-                    ausgewählten Tags und dem maximalen Entfernungsradius gefiltert werden. Bei POST-Anfragen werden
-                    Filterkriterien wie Tags und Entfernung aktualisiert.</p>
-                <p><strong>Beispielausgabe:</strong></p>
-                <pre><code>GET /: Gibt die HTML-Seite zurück, die die gefilterten Orte und deren Bilder anzeigt. Die Tags werden basierend auf den Benutzereinstellungen und den ausgewählten Filtern gefiltert.</code></pre>
-
-                <h2 id="recieveTags">Tags Empfang</h2>
-                <h3>Abschnitt / Modul: Tag-Verarbeitung</h3>
-                <p><strong>Route:</strong> /recieveTags</p>
-                <p><strong>Methoden:</strong> POST</p>
-                <p><strong>Zweck:</strong> Diese Route empfängt Filterkriterien wie Tags und maximale Entfernung vom
-                    Benutzer und aktualisiert die globalen Filtereinstellungen.</p>
-                <p><strong>Beispielausgabe:</strong></p>
-                <pre><code>POST /recieveTags: {"tags": ["Park", "Museum"], "max_distance": 5, "user_lat": 52.52, "user_lon": 13.405}</code></pre>
-
-                <h2 id="login">Login</h2>
-                <h3>Abschnitt / Modul: Authentifizierung</h3>
-                <p><strong>Route:</strong> /login</p>
-                <p><strong>Methoden:</strong> GET, POST</p>
-                <p><strong>Zweck:</strong> Die Login-Seite zeigt ein Login-Formular an. Bei POST-Anfragen wird der
-                    Benutzer authentifiziert.</p>
-                <p><strong>Beispielausgabe:</strong></p>
-                <pre><code>GET /login: Gibt die HTML-Seite mit dem Login-Formular zurück.</code></pre>
-
-                <h2 id="registration">Registrierung</h2>
-                <h3>Abschnitt / Modul: Authentifizierung</h3>
-                <p><strong>Route:</strong> /registration</p>
-                <p><strong>Methoden:</strong> GET, POST</p>
-                <p><strong>Zweck:</strong> Die Registrierungsseite zeigt ein Registrierungsformular an. Bei
-                    POST-Anfragen wird ein neuer Benutzer erstellt.</p>
-                <p><strong>Beispielausgabe:</strong></p>
-                <pre><code>GET /registration: Gibt die HTML-Seite mit dem Registrierungsformular zurück.</code></pre>
-
-                <h2 id="favorites">Favoriten</h2>
-                <h3>Abschnitt / Modul: Favoritenverwaltung</h3>
-                <p><strong>Route:</strong> /favorites</p>
-                <p><strong>Methoden:</strong> GET</p>
-                <p><strong>Zweck:</strong> Zeigt die Favoriten des angemeldeten Benutzers an. Wenn der Benutzer nicht
-                    angemeldet ist, wird er auf die Login-Seite weitergeleitet.</p>
-                <p><strong>Beispielausgabe:</strong></p>
-                <pre><code>GET /favorites: Gibt die HTML-Seite zurück, die die Favoriten des Benutzers anzeigt. Der Benutzer muss angemeldet sein.</code></pre>
-
-                <h2 id="create_user">Benutzer erstellen</h2>
-                <h3>Abschnitt / Modul: Authentifizierung</h3>
-                <p><strong>Route:</strong> /create_user</p>
-                <p><strong>Methoden:</strong> POST</p>
-                <p><strong>Zweck:</strong> Diese Route erstellt einen neuen Benutzer in Firebase Auth und speichert die
-                    Benutzerdaten in der Firebase-Datenbank.</p>
-                <p><strong>Beispielausgabe:</strong></p>
-                <pre><code>POST /create_user: {"email": "user@example.com", "password": "securepassword", "full_name": "John Doe"}</code></pre>
-
-                <h2 id="login_user">Benutzer-Login</h2>
-                <h3>Abschnitt / Modul: Authentifizierung</h3>
-                <p><strong>Route:</strong> /login_user</p>
-                <p><strong>Methoden:</strong> POST</p>
-                <p><strong>Zweck:</strong> Diese Route authentifiziert den Benutzer und speichert die Benutzerdaten in
-                    der Session.</p>
-                <p><strong>Beispielausgabe:</strong></p>
-                <pre><code>POST /login_user: {"email": "user@example.com", "password": "securepassword"}</code></pre>
-
-                <h2 id="logout">Logout</h2>
-                <h3>Abschnitt / Modul: Authentifizierung</h3>
-                <p><strong>Route:</strong> /logout</p>
-                <p><strong>Methoden:</strong> GET</p>
-                <p><strong>Zweck:</strong> Meldet den Benutzer ab, indem die Session gelöscht wird, und leitet ihn
-                    zurück zur Startseite.</p>
-                <p><strong>Beispielausgabe:</strong></p>
-                <pre><code>GET /logout: Leitet den Benutzer zur Startseite weiter und löscht die Session-Daten.</code></pre>
-
-                <h2 id="set_favorite">Favorit hinzufügen</h2>
-                <h3>Abschnitt / Modul: Favoritenverwaltung</h3>
-                <p><strong>Route:</strong> /set_favorite</p>
-                <p><strong>Methoden:</strong> POST</p>
-                <p><strong>Zweck:</strong> Diese Route fügt eine Location zur Liste der Favoriten des Benutzers hinzu.
-                    Der Benutzer muss angemeldet sein.</p>
-                <p><strong>Beispielausgabe:</strong></p>
-                <pre><code>POST /set_favorite: {"favorite": "location_id"}</code></pre>
-
-                <h2 id="delete_favorite">Favorit entfernen</h2>
-                <h3>Abschnitt / Modul: Favoritenverwaltung</h3>
-                <p><strong>Route:</strong> /delete_favorite</p>
-                <p><strong>Methoden:</strong> POST</p>
-                <p><strong>Zweck:</strong> Diese Route entfernt eine Location aus der Liste der Favoriten des Benutzers.
-                    Der Benutzer muss angemeldet sein.</p>
-                <p><strong>Beispielausgabe:</strong></p>
-                <pre><code>POST /delete_favorite: {"favorite": "location_id"}</code></pre>
-            </div>
-
-            <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-            <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-        </body>
-
-        </html>
-
+        </ul>
     </div>
 
-    <div class="container">
-        <h1>Referenz</h1>
+    <body>
 
+        <div class="container">
+            <h1>Referenzdokumentation</h1>
 
-    </div>
+            <h2 id="index">Startseite</h2>
+            <h3>Abschnitt / Modul: Hauptansicht</h3>
+            <p><strong>Route:</strong> /</p>
+            <p><strong>Methoden:</strong> GET, POST</p>
+            <p><strong>Zweck:</strong> Die Startseite zeigt eine Liste von Orten an, die nach den vom Benutzer
+                ausgewählten Tags und dem maximalen Entfernungsradius gefiltert werden. Bei POST-Anfragen werden
+                Filterkriterien wie Tags und Entfernung aktualisiert.</p>
+            <p><strong>Beispielausgabe:</strong></p>
+            <pre><code>GET /: Gibt die HTML-Seite zurück, die die gefilterten Orte und deren Bilder anzeigt. Die Tags werden basierend auf den Benutzereinstellungen und den ausgewählten Filtern gefiltert.</code></pre>
+
+            <h2 id="recieveTags">Tags Empfang</h2>
+            <h3>Abschnitt / Modul: Tag-Verarbeitung</h3>
+            <p><strong>Route:</strong> /recieveTags</p>
+            <p><strong>Methoden:</strong> POST</p>
+            <p><strong>Zweck:</strong> Diese Route empfängt Filterkriterien wie Tags und maximale Entfernung vom
+                Benutzer und aktualisiert die globalen Filtereinstellungen.</p>
+            <p><strong>Beispielausgabe:</strong></p>
+            <pre><code>POST /recieveTags: {"tags": ["Park", "Museum"], "max_distance": 5, "user_lat": 52.52, "user_lon": 13.405}</code></pre>
+
+            <h2 id="login">Login</h2>
+            <h3>Abschnitt / Modul: Authentifizierung</h3>
+            <p><strong>Route:</strong> /login</p>
+            <p><strong>Methoden:</strong> GET, POST</p>
+            <p><strong>Zweck:</strong> Die Login-Seite zeigt ein Login-Formular an. Bei POST-Anfragen wird der
+                Benutzer authentifiziert.</p>
+            <p><strong>Beispielausgabe:</strong></p>
+            <pre><code>GET /login: Gibt die HTML-Seite mit dem Login-Formular zurück.</code></pre>
+
+            <h2 id="registration">Registrierung</h2>
+            <h3>Abschnitt / Modul: Authentifizierung</h3>
+            <p><strong>Route:</strong> /registration</p>
+            <p><strong>Methoden:</strong> GET, POST</p>
+            <p><strong>Zweck:</strong> Die Registrierungsseite zeigt ein Registrierungsformular an. Bei
+                POST-Anfragen wird ein neuer Benutzer erstellt.</p>
+            <p><strong>Beispielausgabe:</strong></p>
+            <pre><code>GET /registration: Gibt die HTML-Seite mit dem Registrierungsformular zurück.</code></pre>
+
+            <h2 id="favorites">Favoriten</h2>
+            <h3>Abschnitt / Modul: Favoritenverwaltung</h3>
+            <p><strong>Route:</strong> /favorites</p>
+            <p><strong>Methoden:</strong> GET</p>
+            <p><strong>Zweck:</strong> Zeigt die Favoriten des angemeldeten Benutzers an. Wenn der Benutzer nicht
+                angemeldet ist, wird er auf die Login-Seite weitergeleitet.</p>
+            <p><strong>Beispielausgabe:</strong></p>
+            <pre><code>GET /favorites: Gibt die HTML-Seite zurück, die die Favoriten des Benutzers anzeigt. Der Benutzer muss angemeldet sein.</code></pre>
+
+            <h2 id="create_user">Benutzer erstellen</h2>
+            <h3>Abschnitt / Modul: Authentifizierung</h3>
+            <p><strong>Route:</strong> /create_user</p>
+            <p><strong>Methoden:</strong> POST</p>
+            <p><strong>Zweck:</strong> Diese Route erstellt einen neuen Benutzer in Firebase Auth und speichert die
+                Benutzerdaten in der Firebase-Datenbank.</p>
+            <p><strong>Beispielausgabe:</strong></p>
+            <pre><code>POST /create_user: {"email": "user@example.com", "password": "securepassword", "full_name": "John Doe"}</code></pre>
+
+            <h2 id="login_user">Benutzer-Login</h2>
+            <h3>Abschnitt / Modul: Authentifizierung</h3>
+            <p><strong>Route:</strong> /login_user</p>
+            <p><strong>Methoden:</strong> POST</p>
+            <p><strong>Zweck:</strong> Diese Route authentifiziert den Benutzer und speichert die Benutzerdaten in
+                der Session.</p>
+            <p><strong>Beispielausgabe:</strong></p>
+            <pre><code>POST /login_user: {"email": "user@example.com", "password": "securepassword"}</code></pre>
+
+            <h2 id="logout">Logout</h2>
+            <h3>Abschnitt / Modul: Authentifizierung</h3>
+            <p><strong>Route:</strong> /logout</p>
+            <p><strong>Methoden:</strong> GET</p>
+            <p><strong>Zweck:</strong> Meldet den Benutzer ab, indem die Session gelöscht wird, und leitet ihn
+                zurück zur Startseite.</p>
+            <p><strong>Beispielausgabe:</strong></p>
+            <pre><code>GET /logout: Leitet den Benutzer zur Startseite weiter und löscht die Session-Daten.</code></pre>
+
+            <h2 id="set_favorite">Favorit hinzufügen</h2>
+            <h3>Abschnitt / Modul: Favoritenverwaltung</h3>
+            <p><strong>Route:</strong> /set_favorite</p>
+            <p><strong>Methoden:</strong> POST</p>
+            <p><strong>Zweck:</strong> Diese Route fügt eine Location zur Liste der Favoriten des Benutzers hinzu.
+                Der Benutzer muss angemeldet sein.</p>
+            <p><strong>Beispielausgabe:</strong></p>
+            <pre><code>POST /set_favorite: {"favorite": "location_id"}</code></pre>
+
+            <h2 id="delete_favorite">Favorit entfernen</h2>
+            <h3>Abschnitt / Modul: Favoritenverwaltung</h3>
+            <p><strong>Route:</strong> /delete_favorite</p>
+            <p><strong>Methoden:</strong> POST</p>
+            <p><strong>Zweck:</strong> Diese Route entfernt eine Location aus der Liste der Favoriten des Benutzers.
+                Der Benutzer muss angemeldet sein.</p>
+            <p><strong>Beispielausgabe:</strong></p>
+            <pre><code>POST /delete_favorite: {"favorite": "location_id"}</code></pre>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </body>
+
+</html>
+
+</div>
 </body>
 
 </html>
