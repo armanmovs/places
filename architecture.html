@@ -59,16 +59,12 @@
     <!-- Menu -->
      <div class="menu">
         <ul>
-            <li><a href="index.html">Start</a></li> 
             <li><a href="project-description.html">Projektbeschreibung</a></li>
             <li>
                 <a href="timeline.html">Zeitplan</a>
             </li>
             <li>
                 <a href="value-proposition.html">Value Proposition</a>
-            </li>
-            <li>
-                <a href="vorbereitung.html">Vorbereitung</a>
             </li>
                <li>
                 <a href="architecture.html">Architecture</a>
@@ -86,10 +82,12 @@
              <li>
                 <a href="Team-Evaluation.html">Team-Evaluation</a>
             </li>
-             <li>
-                <a href="UI-Components.html">UI-Komponenten</a>
+            <li>
+                <a href="reference.html">Referenz</a>
             </li>
-            
+            <li>
+                <a href="sources.html">Sources</a>
+            </li>
         </ul>
     </div>
     
@@ -110,56 +108,16 @@
             <li><strong>Firebase</strong>: Backend-Dienste zur Speicherung von Benutzerdaten, Verwaltung der Authentifizierung und Synchronisierung von Benutzeraktionen mit der Datenbank.</li>
         </ul>
 
-        <h2 id="Design Decisions">Design Decisions</h2>
-        <p><strong>Client-Side</strong></p>
-        <ul>
-            <li><strong>Event Listeners</strong>: Umfangreich verwendet, um Benutzerinteraktionen wie Klicks, Eingabeänderungen und Laden von DOM-Inhalten zu behandeln.</li>
-            <li><strong>Fetch API</strong>: Wird für HTTP-Anfragen an den Server verwendet, um eine nahtlose Benutzererfahrung mit asynchronen Operationen zu gewährleisten.</li>
-            <li><strong>Geolocation</strong>: Nutzt die Geolocation-API des Browsers, um den Standort des Benutzers zu erfassen und zu speichern, was die Personalisierungsfunktionen der App verbessert.</li>
-            <li><strong>Mapbox Integration</strong>: Bietet eine leistungsstarke und interaktive Kartenoberfläche, damit Benutzer Standorte visualisieren und geografische Filter anwenden können.</li>
-        </ul>
-
-        <p><strong>UI Components</strong></p>
-        <ul>
-            <li><strong>Filter Bar</strong>: Ermöglicht es Benutzern, Standorte basierend auf verschiedenen Kriterien (geografischer Radius, Typ, Thema, Anwendungsfall) zu filtern. Jede Filtertaste löst einen Dialog für detaillierte Auswahlen aus.</li>
-            <li><strong>Modals</strong>: Werden für die Anmeldung, Registrierung und Anzeige detaillierter Standortvorschauen mit Bildern verwendet. Dies verbessert die Benutzererfahrung, indem mehr Informationen bereitgestellt werden, ohne die Hauptseite zu verlassen.</li>
-            <li><strong>Carousel</strong>: Zum Anzeigen mehrerer Bilder innerhalb von Standortvorschauen auf eine elegante und benutzerfreundliche Weise.</li>
-        </ul>
 
         <p><strong>Firebase</strong></p>
         <ul>
             <li><strong>Authentication</strong>: Verwalten von Benutzeranmeldungen und -registrierungen und gewährleisten des sicheren Zugriffs auf personalisierte Funktionen.</li>
             <li><strong>Real-Time Database</strong>: Speichert Benutzerdaten wie Profilinformationen und Standortpräferenzen und ermöglicht die Echtzeit-Synchronisierung über Geräte hinweg.</li>
-        </ul>
-
-        <h2 id="Key Solutions">Key Solutions</h2>
-        <p><strong>User Authentication and Data Management</strong></p>
-        <ul>
             <li><strong>Firebase Auth and Database Integration</strong>: Stellt sicher, dass Benutzerdaten sicher gespeichert und leicht zugänglich sind. Benutzeraktionen wie Anmeldung, Registrierung und letzte Anmeldeaktualisierungen werden nahtlos verarbeitet.</li>
             <li><strong>Error Handling</strong>: Warnt Benutzer, alle Felder auszufüllen, und zeigt Fehlernachrichten von Firebase an, um Benutzeraktionen zu leiten.</li>
         </ul>
 
-        <p><strong>Geolocation and Map Visualization</strong></p>
-        <ul>
-            <li><strong>Mapbox Integration</strong>: Bietet ein reichhaltiges interaktives Kartenerlebnis mit Funktionen wie Benutzerstandortmarkierungen, einstellbaren Radiuskreisen für Filterung und dynamischer Kartengrößenanpassung.</li>
-            <li><strong>Geolocation Handling</strong>: Speichert und ruft den Benutzerstandort aus dem lokalen Speicher ab, wodurch personalisierte Kartenansichten und Filter ermöglicht werden.</li>
-        </ul>
-
-        <p><strong>UI/UX Enhancements</strong></p>
-        <ul>
-            <li><strong>Dynamic Dialogs</strong>: Modulare Dialoge, die durch Filtertasten ausgelöst werden, sorgen für eine saubere und organisierte Benutzeroberfläche. Sie sind relativ zu ihren Auslösern positioniert und können leicht geschlossen werden.</li>
-            <li><strong>Interactive Elements</strong>: Schieberegler zur Anpassung des Radius, Karussells für Bildvorschauen und reaktionsschnelle Schaltflächen verbessern die Interaktivität und Benutzerbindung der App.</li>
-        </ul>
-
-        <p><strong>Responsive Design</strong></p>
-        <ul>
-            <li><strong>CSS Styling</strong>: Stellt sicher, dass die Benutzeroberfläche auf verschiedenen Geräten benutzerfreundlich ist, wobei Komponenten wie Filterleisten, Schaltflächen und Karussells für Reaktionsfähigkeit und Benutzerfreundlichkeit gestaltet sind.</li>
-        </ul>
-
-        <p><strong>Modular Code Structure</strong></p>
-        <ul>
-            <li><strong>Separation of Concerns</strong>: JavaScript-Funktionen sind modular und konzentrieren sich auf spezifische Aufgaben wie Karteninitialisierung, Anfragenverarbeitung und UI-Aktualisierungen. Dies verbessert die Wartbarkeit und Lesbarkeit des Codes.</li>
-        </ul>
+        
     </div>
 </body>
 </html>

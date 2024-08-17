@@ -4,6 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projektbeschreibung</title>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', {'packages':['gantt']});
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'Task ID');
+            data.addColumn('string', 'Task Name');
+            data.addColumn('date', 'Start Date');
+            data.addColumn('date', 'End Date');
+            data.addColumn('number', 'Duration');
+            data.addColumn('number', 'Percent Complete');
+            data.addColumn('string', 'Dependencies');
+
+            data.addRows([
+               ['1', 'Erstes Commit', new Date(2024, 4, 14), new Date(2024, 4, 15), null, 100, null],
+                ['2', 'Startseite', new Date(2024, 4, 14), new Date(2024, 4, 20), null, 100, null],
+                ['3', 'Login+Registrierung', new Date(2024, 4, 17), new Date(2024, 4, 21), null, 100, null],
+                ['4', 'Firebase Verbindung', new Date(2024, 4, 19), new Date(2024, 4, 23), null, 100, null],
+                ['5', 'Design Anpassung', new Date(2024, 4, 23), new Date(2024, 4, 24), null, 100, null],
+                ['6', 'Fix & Update Version 1.02.03', new Date(2024, 4, 29), new Date(2024, 4, 30), null, 100, null],
+                ['7', 'Version Zwischenstand 30/05', new Date(2024, 4, 30), new Date(2024, 4, 31), null, 100, null],
+                ['8', 'Filter Bar Design', new Date(2024, 4, 31), new Date(2024, 5, 3), null, 100, null],
+                ['9', 'Befüllung der Datenbank', new Date(2024, 6, 14), new Date(2024, 6, 21), null, 100, null],
+                ['10', 'Login + Registrierung mit Datenbankverbindung', new Date(2024, 6, 24), new Date(2024, 6, 25), null, 100, null],
+                ['11', 'Tagging-System', new Date(2024, 6, 25), new Date(2024, 6, 30), null, 100, null],
+                ['12', 'Einführung der neuen Routen für Post-Anfragen', new Date(2024, 6, 31), new Date(2024, 7, 1), null, 100, null],
+                ['13', 'Letzte Design Anpassungen', new Date(2024, 6, 31), new Date(2024, 7, 1), null, 100, null]
+           
+            ]);
+
+            var options = {
+                height: 400,
+                gantt: {
+                    trackHeight: 30
+                }
+            };
+
+            var chart = new google.visualization.Gantt(document.getElementById('gantt_chart'));
+            chart.draw(data, options);
+        }
+    </script>
     <link rel="stylesheet" href="styles.css">
     <style>
         body {
@@ -59,16 +102,12 @@
     <!-- Menu -->
      <div class="menu">
         <ul>
-            <li><a href="index.html">Start</a></li> 
             <li><a href="project-description.html">Projektbeschreibung</a></li>
             <li>
                 <a href="timeline.html">Zeitplan</a>
             </li>
             <li>
                 <a href="value-proposition.html">Value Proposition</a>
-            </li>
-            <li>
-                <a href="vorbereitung.html">Vorbereitung</a>
             </li>
                <li>
                 <a href="architecture.html">Architecture</a>
@@ -87,8 +126,12 @@
                 <a href="Team-Evaluation.html">Team-Evaluation</a>
             </li>
              <li>
-                <a href="UI-Components.html">UI-Komponenten</a>
+                <a href="reference.html">Referenz</a>
             </li>
+             <li>
+                <a href="sources.html">Sources</a>
+            </li>
+
             
         </ul>
     </div>
@@ -102,7 +145,9 @@
 
         <h2 id="Zweite Phase">Zweite Phase</h2>
         <p>Die zweite Phase begann am 15. Juli. In dieser Phase wurde die Datenbank vollständig gefüllt, der Code für die Favoriten-Seite geschrieben, das Tagging-System für die Locationsuche implementiert und Pop-up-Fenster für jede Location erstellt. Außerdem wurde die Webseite mit der Dokumentation erstellt.</p>
-        
+       
+        <div id="gantt_chart"></div>
+    </div>
     </div>
 </body>
 </html>
